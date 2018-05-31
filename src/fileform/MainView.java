@@ -42,7 +42,7 @@ public class MainView extends Application {
         columnName.setMinWidth(200);
 
         TableColumn<Entity, String> columnImage = new TableColumn<>("Ảnh");
-        columnImage.setCellValueFactory(new PropertyValueFactory<>("image"));
+        columnImage.setCellValueFactory(new PropertyValueFactory<>("img"));
         columnImage.setMinWidth(200);
 
         TableColumn<Entity, Integer> columnPrice = new TableColumn<>("Giá (VND)");
@@ -63,8 +63,8 @@ public class MainView extends Application {
                                     for (Entity en : list) {
                                         Image img = new Image(en.getImg());
                                         ImageView imgView = new ImageView(img);
-                                        imgView.setFitHeight(50);
-                                        imgView.setFitWidth(50);
+                                        imgView.setFitHeight(200);
+                                        imgView.setFitWidth(200);
                                         setGraphic(imgView);
                                     }
                                 }
